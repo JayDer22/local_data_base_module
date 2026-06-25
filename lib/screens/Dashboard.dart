@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'addcontects.dart';
+
 class Dashboard extends StatefulWidget {
   final String name;
   final String number;
@@ -67,15 +69,13 @@ class _DashboardState extends State<Dashboard> {
 
             const SizedBox(height: 20),
 
-            const Text(
-              "No Chats Yet",
-              style: TextStyle(
-                color: Colors.grey,
-              ),
-            ),
+
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(onPressed: (){
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Addcontects()));
+      }),
     );
   }
 }
